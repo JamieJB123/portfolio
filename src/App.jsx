@@ -1,14 +1,13 @@
 import './App.css'
+import Navbar from './components/Navbar'
 
-function App() {
+export default function App() {
 
   return (
     <>
-      <div>
-        <img src="src/assets/portfolio-no-bg.png" alt="Code symbol consisting of angled brackets and a forward slash."/>
-      </div>
+      <Navbar />
     </>
   )
 }
 
-export default App
+
