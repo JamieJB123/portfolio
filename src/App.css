@@ -30,6 +30,7 @@ nav {
     align-items: center;
     padding: 1rem 2rem;
     color: var(--dark-gold);
+    background-color: #0D0D0D;
 }
 
 ul {
