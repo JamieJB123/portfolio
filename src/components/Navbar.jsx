@@ -5,6 +5,7 @@ export default function NavBar() {
     const [ isOpen, setIsOpen ] = useState(false)
 
     return (
+        <>
         <nav>
             <div>
                 <h1>MyPortfolio</h1>
@@ -17,5 +18,7 @@ export default function NavBar() {
             </ul>
             <div className="burger-menu" onClick={() => setIsOpen((prevState) => !prevState )}>&#9776;</div>
         </nav>
+        <h1 className={isOpen ? "navbar-open" : ""}>Hello world!</h1>
+        </>
     )
 }

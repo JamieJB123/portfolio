@@ -50,11 +50,13 @@ ul a {
     cursor: pointer;
 }
 
+.navbar-open {
+    margin-top: 200px;
+    transition: margin-top 1s ease;
+}
+
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;
-    }
-    .nav-links.active {
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -63,10 +65,18 @@ ul a {
         left: 0%;
         width: 100vw;
         background-color: var(--brown-dark);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        transition: padding 0.8s;
+    }
+    .nav-links.active {
         padding: 1rem 2rem;
         border-radius: 10px;
+        max-height: 500px;
+        transition: max-height 1s ease-out;
     }
-    
+
     .burger-menu {
         display: flex;
         align-items: center;
