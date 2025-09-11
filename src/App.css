@@ -2,7 +2,8 @@
 
 :root {
     --black: #0D0D0D;
-    --main-dark: #181818;
+    --main-dark: #121212;
+    --light-main-dark: #181818;
     --green-dark: #161712;
     --brown-dark: #1F1B18;
     --dark-gold: #AC8F37;
@@ -10,6 +11,7 @@
     --straw: #EEE07A;
     --amber: #FFBF00;
     --orange: #FF5722;
+    --light: #f7f7f7;
 }
 
 * {
@@ -18,9 +20,10 @@
 }
 
 body {
-    background-color: var(--main-dark);
+    background-color: #121212;
     font-family: 'Space Mono', monospace;
     font-weight: 600;
+    color: var(--light);
 }
 
 nav {
@@ -55,6 +58,65 @@ ul a {
     margin-top: 200px;
     transition: margin-top 1s ease;
 }
+
+/* Header Section */
+
+.header-section {
+    color: var(--light);
+    height: 95dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0rem 4rem;
+    font-size: 1.3rem;
+}
+
+.header-section h1 {
+    margin-bottom: 1rem;
+}
+.header-section h2 {
+    margin-bottom: 1rem;
+}
+.header-section hr {
+    width: 75%;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 5rem;
+    height: 100dvh;
+}
+
+.image-section > * {
+    width: 50%;
+    border: 1px solid white;
+    margin-top: -3rem;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.profile-image-container {
+    border-radius: 50%;
+    background-image: url("src/assets/profile-image.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+}
+.about-skills {
+    margin-top: -5rem;
+}
+.about-skills h2 {
+    margin-bottom: 5rem;
+}
+
 
 @media screen and (max-width: 768px) {
     .nav-links {
