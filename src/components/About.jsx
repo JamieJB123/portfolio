@@ -22,10 +22,10 @@ export default function About() {
 
     return (
         <>
-            <main>
+            <div className="about-info" id="about">
                 <section className="about-intro">
                         <h2>Junior Full Stack Developer</h2>
-                        <p>Based in Cornwall, UK</p>
+                        <p className="text-xl">Greater London, UK</p>
                 </section>
                 <div className="image-section">
                     <hr />
@@ -34,12 +34,14 @@ export default function About() {
                 </div>
                 <section className="about-skills">
                     <h2>Skills:</h2>
-                    <p>Over the last several months I have been honing my skills as a software developer across the stack. With a background in psychology and social care, I bring with me the same attentiveness, care and focus on user experience.</p>
+                    <p className="text-xl">Over the last several months I have been honing my skills as a software developer across the stack. With a background in psychology and social care, I bring with me the same attentiveness, care and focus on user experience.</p>
                 </section>
-                <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 py-10">
+            </div>
+            <div className="flex justify-center items-center w-full">
+                <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 py-10 px-auto">
                     {cardElements}
                 </section>
-            </main>
+            </div>
 
         </>
     )
