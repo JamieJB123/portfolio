@@ -37,7 +37,12 @@ export default function About() {
                     <p className="text-xl">Over the last several months I have been honing my skills as a software developer across the stack. With a background in psychology and social care, I bring with me the same attentiveness, care and focus on user experience.</p>
                 </section>
             </div>
-            <div className="flex justify-center items-center w-full">
+            <div className="technology-title flex justify-center items-center gap-4">
+                <hr className="w-7/24"/>
+                <div className="text-5xl">Technologies</div>
+                <hr className="w-7/24"/>
+            </div>
+            <div className="flex justify-center items-center">
                 <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 py-10 px-auto">
                     {cardElements}
                 </section>
