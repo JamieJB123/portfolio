@@ -36,6 +36,7 @@ export default function About() {
                     <h2>Skills:</h2>
                     <p className="text-xl">Over the last several months I have been honing my skills as a software developer across the stack. With a background in psychology and social care, I bring with me the same attentiveness, care and focus on user experience.</p>
                 </section>
+                <div className="glow2"></div>
             </div>
             <div className="technology-title flex justify-center items-center gap-4">
                 <hr className="w-7/24"/>
