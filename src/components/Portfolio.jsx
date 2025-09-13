@@ -22,9 +22,9 @@ export default function Portfolio() {
                                 <div className="language-element-container">
                                     {languageElements}
                                 </div>
-                                <div >
+                                { portfolio.frameworks && <div >
                                     {frameworkElements}
-                                </div>
+                                </div>}
                             </div>
                         </div>
                     </div>

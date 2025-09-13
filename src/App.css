@@ -244,18 +244,13 @@ nav {
 
 #portfolio {
     height: 110dvh;
+    margin: 5rem 0rem;
 }
 
 .portfolio-title {
     width: 100%;
     margin: 5rem 0rem;
 }
-
-/* #portfolio ul li {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-} */
 
 #portfolio ul {
     position: relative;
@@ -284,7 +279,7 @@ nav {
     background-color: var(--purple);
     z-index: 400;
     left: -44px;
-    top: 43px;
+    top: 40%;
 }
 
 .portfolio-image-wrapper {
@@ -337,6 +332,7 @@ nav {
     padding: 2px 8px;
     border-radius: 8px;
     border: 1px dashed var(--main-dark);
+    margin-right: 0.4rem;
 }
 
 .frameworks {
@@ -344,6 +340,7 @@ nav {
     padding: 2px 8px;
     border-radius: 8px;
     border: 1px dashed var(--main-dark);
+    margin-right: 0.4rem;
 }
 @media screen and (max-width: 768px) {
     .nav-links {
