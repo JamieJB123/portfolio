@@ -14,6 +14,7 @@
     --orange: #FF5722;
     --light: #f7f7f7;
     --purple: #312E81;
+    --light-purple: #9A8EE8;
 }
 
 * {
@@ -28,6 +29,8 @@ body {
     font-family: 'Space Mono', monospace;
     font-weight: 600;
     color: var(--light);
+    /* cursor: url('/src/assets/custom-cursor.png'), auto; */
+    cursor: none;
 }
 
 nav {
@@ -64,6 +67,48 @@ ul a {
     transition: margin-top 1s ease;
 }
 
+/* Mouse Effect */
+
+.gold-glow {
+    position: fixed;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, var(--old-gold, var(--straw)));
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: translate(-15%, -15%);
+    z-index: 999;
+}
+
+.pulse {
+    position: fixed;
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--light-purple);
+    background: transparent;
+    z-index: 1000;
+    animation: expand 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
 /* Header Section */
 
 .header-section {
