@@ -44,14 +44,14 @@ nav {
     font-size: 1.5rem;
 }
 
-ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1rem;
     align-items: center;
     padding: 0;
 }
-ul a {
+.nav-links a {
     text-decoration: none;
     color: var(--dark-gold);
     font-size: 1.5rem;
@@ -247,11 +247,11 @@ ul a {
     margin: 5rem 0rem;
 }
 
-#portfolio ul li {
+/* #portfolio ul li {
     width: 100px;
     height: 100px;
     background-color: white;
-}
+} */
 
 #portfolio ul {
     position: relative;
@@ -281,8 +281,19 @@ ul a {
     z-index: 400;
     left: -44px;
     top: 43px;
-
 }
+
+.portfolio-image-wrapper {
+    max-height: 200px;
+    max-width: 280px;
+    border: 4px solid var(--old-gold);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.portfolio-image-wrapper img {
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .nav-links {
         display: flex;
