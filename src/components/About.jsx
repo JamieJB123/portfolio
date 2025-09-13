@@ -4,7 +4,7 @@ export default function About() {
 
     const cardElements = cards.map((card) => {
         return (
-            <div className="card-container w-64 h-80 perspective" id={card.id}>
+            <div className="card-container w-64 h-80 perspective" key={card.id}>
                 <div className="card relative w-full h-full transition-transform duration-700 transform-style hover:rotate-y-180">
                     {/* Front */}
                     <div className="front-side absolute w-full h-full flex items-center justify-center backface-hidden">

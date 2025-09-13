@@ -5,7 +5,7 @@ export default function Home() {
                 <h1>Jamie Jarvis-Bicknell</h1>
                 <h2>Full Stack Software Developer</h2>
                 <hr></hr>
-                <div class="glow"></div>
+                <div className="glow"></div>
             </header>
         </>
     )
