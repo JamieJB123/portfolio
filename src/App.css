@@ -15,6 +15,10 @@
     --light: #f7f7f7;
     --purple: #312E81;
     --light-purple: #9A8EE8;
+    --p: #FFDAB9;
+    --m: #A7FFEB;
+    --g: #E0E0E0;
+    --b: #AEEFFF;
 }
 
 * {
@@ -293,7 +297,54 @@ nav {
 .portfolio-image-wrapper img {
     border-radius: 20px;
 }
+.portfolio-info-wrapper {
+    background-color: var(--p);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--main-dark);
+}
 
+.portfolio-inner-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: -15px;
+    margin-bottom: 0.6rem;
+}
+.portfolio-link {
+    color: var(--purple);
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+.portfolio-link:hover {
+    text-decoration: underline;
+    color: var(--light-purple);
+}
+.portfolio-content {
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+.tech-container {
+    justify-content: space-around;
+}
+
+.language-element-container {
+    margin-bottom: 1rem;
+}
+
+.languages {
+    background-color: var(--light-purple);
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px dashed var(--main-dark);
+}
+
+.frameworks {
+    background-color: var(--m);
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px dashed var(--main-dark);
+}
 @media screen and (max-width: 768px) {
     .nav-links {
         display: flex;

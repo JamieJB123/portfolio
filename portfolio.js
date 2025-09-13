@@ -53,6 +53,7 @@ export default [
         alt: "Portfolio image of Healthy Mind Project",
         title: "Healthy Mind",
         content: "First project independently built as part of my Code Institute bootcamp. This was the first website I independently built.",
+        liveLink: "https://jamiejb123.github.io/mental-health-awareness-project/",
         languages: ["HTML", "CSS", "JavaScript"],
         frameworks: ["Bootstrap"]
     }
