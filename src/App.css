@@ -116,6 +116,25 @@ nav {
 
 /* Header Section */
 
+.progress-bar {
+    height: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 105%;
+    z-index: 1000;
+    border-radius: 50px;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, -0.2));
+    pointer-events: none;
+    /* doesn’t block clicks */
+}
+
 .header-section {
     color: var(--light);
     height: 95dvh;
