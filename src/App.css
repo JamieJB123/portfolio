@@ -113,6 +113,7 @@ nav {
         opacity: 0;
     }
 }
+
 /* Header Section */
 
 .header-section {
@@ -126,16 +127,43 @@ nav {
 }
 
 .header-section h1 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-.header-section h2 {
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
 }
 .header-section hr {
     width: 75%;
 }
+
+/* Header Animations */
+
+.typewriter-effect {
+    animation: blink 1s steps(2, start) infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-message {
+    opacity: 0;
+    text-align: center;
+    color: var(--dark-gold);
+    margin-bottom: 0.5rem;
+}
+
+.header-message.visible {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: opacity 4s, transform 2s;
+
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
+
 .glow {
     background-color: var(--purple);
     width: 400px;
@@ -146,7 +174,9 @@ nav {
     z-index: -1;
     filter: blur(80px);
 }
-/* Main Section */
+
+/* About Section */
+
 .about-info {
     position: relative;
     display: flex;
@@ -155,16 +185,23 @@ nav {
     margin: 0rem 5rem;
     height: 100dvh;
 }
-.glow2 {
-    background-image: linear-gradient(270deg, var(--dark-gold), var(--purple));
-    width: 65%;
-    height: 20px;
+hr.glow2 {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+hr.glow2:before {
+    content: "";
     position: absolute;
-    top: 46%;
-    left: 5%;
+    background-image: linear-gradient(90deg, var(--purple), var(--light-purple));
+    width: 110%;
+    height: 20px;
+    transform: translate(-2%, -50%);
     z-index: -1;
     filter: blur(25px);
+    pointer-events: none;
 }
+
 .image-section > * {
     width: 50%;
     border: 1px solid white;
@@ -198,11 +235,13 @@ nav {
     margin-bottom: 3rem;
 }
 
-/* Title */
+/* Technologies Section */
+
 .technology-title {
     margin: 5rem 0rem;
 }
-/* Cards */
+
+/* Styling Flip Cards */
 
 .perspective {
     perspective: 1000px;
@@ -283,8 +322,10 @@ nav {
 }
 
 .portfolio-image-wrapper {
+    min-height: 200px;
     max-height: 200px;
     max-width: 280px;
+    min-width: 280px;
     border: 4px solid var(--old-gold);
     border-radius: 20px;
     overflow: hidden;
@@ -342,7 +383,13 @@ nav {
     border: 1px dashed var(--main-dark);
     margin-right: 0.4rem;
 }
+
+/* Media Queries */
+
+
 @media screen and (max-width: 768px) {
+    /* Navbar */
+
     .nav-links {
         display: flex;
         flex-direction: column;

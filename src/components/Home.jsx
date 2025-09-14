@@ -1,9 +1,10 @@
+import Typing from './Typing'
+
 export default function Home() {
     return (
         <>
             <header id="home" className="header-section">
-                <h1>Jamie Jarvis-Bicknell</h1>
-                <h2>Full Stack Software Developer</h2>
+                <Typing />
                 <hr></hr>
                 <div className="glow"></div>
             </header>

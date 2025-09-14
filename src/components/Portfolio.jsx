@@ -9,7 +9,7 @@ export default function Portfolio() {
         const frameworkElements = portfolio.frameworks.map((framework) => {
             return <span className="frameworks">{framework}</span>
         })
-        return <li>
+        return <li key={portfolio.id}>
                     <div className="flex items-center gap-6">
                         <div className="portfolio-image-wrapper shrink-0">
                             <img src={portfolio.image} alt={portfolio.alt} />
