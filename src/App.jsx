@@ -2,8 +2,9 @@ import './App.css'
 import Navbar from './components/Navbar'
 import MouseMove from './components/MouseMove'
 import Home from './components/Home'
-import About from './components/About'
+import Technologies from './components/Technologies'
 import Portfolio from './components/Portfolio'
+import About from './components/About'
 
 export default function App() {
 
@@ -13,6 +14,7 @@ export default function App() {
       <MouseMove />
       <Home />
       <About />
+      <Technologies />
       <Portfolio />
     </>
   )

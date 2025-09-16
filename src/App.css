@@ -14,7 +14,10 @@
     --orange: #FF5722;
     --light: #f7f7f7;
     --purple: #312E81;
+    --vibrant-purple: #9333EA;
+    --pink: #EC4899;
     --light-purple: #9A8EE8;
+
     --p: #FFDAB9;
     --m: #A7FFEB;
     --g: #E0E0E0;
@@ -33,10 +36,12 @@ body {
     font-family: 'Space Mono', monospace;
     font-weight: 600;
     color: var(--light);
-    /* cursor: url('/src/assets/custom-cursor.png'), auto; */
     cursor: none;
 }
 
+button {
+    cursor: url('/src/assets/custom-cursor.png'), auto;
+}
 nav {
     display: flex;
     position: relative;
@@ -202,7 +207,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin: 0rem 5rem;
-    height: 100dvh;
+    min-height: 110dvh;
 }
 hr.glow2 {
     position: relative;
@@ -223,7 +228,7 @@ hr.glow2:before {
 
 .image-section > * {
     width: 50%;
-    border: 1px solid white;
+    border: 1px solid var(--old-gold);
     margin-top: -3rem;
 }
 .about-intro {
@@ -232,6 +237,11 @@ hr.glow2:before {
 .about-intro h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
+}
+.purple-titles {
+    background: linear-gradient(90deg, var(--vibrant-purple), var(--pink));
+    color: transparent;
+    background-clip: text;
 }
 
 .image-section {
@@ -242,16 +252,29 @@ hr.glow2:before {
 }
 .profile-image-container {
     border-radius: 50%;
+    border: 2px solid var(--old-gold);
     background-image: url("src/assets/profile-image.jpeg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
     width: 400px;
+    box-shadow:
+        2px 2px 4px 4px var(--brown-dark);
 }
+
 .about-skills h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
+}
+
+.about-container {
+
+}
+
+.about-segments {
+    background-color: #EC4899;
+    border-radius: 50px;
 }
 
 /* Technologies Section */

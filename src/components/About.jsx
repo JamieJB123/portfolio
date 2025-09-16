@@ -1,54 +1,128 @@
-import cards from '../../cards'
+import { motion } from 'motion/react'
+import { useState } from 'react'
+import about from '../../about'
 
 export default function About() {
 
-    const cardElements = cards.map((card) => {
+    const [ openIndex, setOpenIndex ] = useState(null)
+
+    const aboutSegments = about.map(( aboutSegment, index ) => {
+        const variants = {
+        float: {
+            y: [0, -5, 0, 5],
+            x: [0, 3, 0, -3],
+            rotate: [-1, 1, -1, 1],
+            transition: {
+                duration: 4 + Math.random(),
+                delay: Math.random() * 2,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut"
+            },
+        },
+        hover: { scale: 1.05, y: -10 },
+        tap: { scale: 0.95, rotate: 2.5, border: "4px solid #312E81" }
+        }
         return (
-            <div className="card-container w-64 h-80 perspective" key={card.id}>
-                <div className="card relative w-full h-full transition-transform duration-700 transform-style hover:rotate-y-180">
-                    {/* Front */}
-                    <div className="front-side absolute w-full h-full flex items-center justify-center backface-hidden">
-                        <img className="card-image" src={card.image} alt={card.alt}></img>
-                    </div>
-                    {/* Back */}
-                    <div className="back-side w-full h-full flex flex-col items-center justify-center backface-hidden rotate-y-180 ">
-                        <h3 className="card-title">{card.title}</h3>
-                        <p className="card-content">{card.content}</p>
-                    </div>
+            <motion.div
+                key={aboutSegment.title}
+                className="about-segments p-5 flex flex-col justify-center items-center"
+                variants={variants}
+                animate="float"
+                whileHover="hover"
+                whileTap="tap"
+                >
+                <button
+                    className="w-full text-xl text-center p-5"
+                    aria-expanded={openIndex === index}
+                    aria-controls={`accordion-panel-${index}`}
+                    id={`accordion-header-${index}`}
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                    {aboutSegment.title}
+                </button>
+                {openIndex === index && (
+                <div
+                id={`accordion-panel-${index}`}
+                role="region"
+                aria-labelledby={`accordion-header-${index}`}
+                className="ps-3 pe-3 pb-3 pt-1"
+                >
+                    <p>{aboutSegment.content}</p>
                 </div>
-            </div>
-        )
+            )}
+            </motion.div>)
     })
+
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.3,
+            }
+        }
+    };
+
+    const itemLeft = {
+        hidden: {
+            opacity: 0,
+            x: "-100vw",
+        },
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: { type: "spring", stiffness: 50, damping: 16, mass: 2 }
+        }
+    }
+
+    const itemRight = {
+        hidden: {
+            opacity: 0,
+            x: "100vw",
+        },
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: { type: "spring", stiffness: 100, damping: 12 }
+        }
+    }
+
 
     return (
         <>
-            <div className="about-info" id="about">
-                <section className="about-intro">
-                        <h2>Junior Full Stack Developer</h2>
+            <motion.div
+                className="about-info overflow-hidden"
+                id="about"
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{once: true, amount: 0.2 }}
+                >
+                <motion.section
+                className="about-intro"
+                variants={itemLeft}
+                >
+                        <h2>Full Stack Web Developer</h2>
                         <p className="text-xl">Greater London, UK</p>
-                </section>
-                <div className="image-section">
+                </motion.section>
+                <motion.div
+                className="image-section"
+                variants={itemRight}
+                >
                     <hr className='glow2'/>
                     <div className="profile-image-container">
                     </div>
-                </div>
-                <section className="about-skills">
-                    <h2>Skills:</h2>
-                    <p className="text-xl">Over the last several months I have been honing my skills as a software developer across the stack. With a background in psychology and social care, I bring with me the same attentiveness, care and focus on user experience.</p>
-                </section>
-                {/* <div className="glow2"></div> */}
-            </div>
-            <div className="technology-title flex justify-center items-center gap-4">
-                <hr className="w-7/24"/>
-                <div className="text-5xl">Technologies</div>
-                <hr className="w-7/24"/>
-            </div>
-            <div className="flex justify-center items-center">
-                <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 py-10 px-auto">
-                    {cardElements}
-                </section>
-            </div>
-
+                </motion.div>
+                <motion.section
+                className="about-skills"
+                variants={itemLeft}
+                >
+                    <h2>About:</h2>
+                    <div className="about-container grid lg:grid-cols-3 gap-8">
+                        {aboutSegments}
+                    </div>
+                </motion.section>
+            </motion.div>
         </>
     )
 }
