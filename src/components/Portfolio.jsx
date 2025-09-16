@@ -35,6 +35,7 @@ export default function Portfolio() {
             initial="hidden"
             whileInView="show"
             viewport={{once: true, amount: 0.2 }}
+            id={`portfolio-${portfolio.id}`}
             >
                     <div className="flex items-center gap-6">
                         <div className="portfolio-image-wrapper shrink-0">

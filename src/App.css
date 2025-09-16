@@ -357,10 +357,67 @@ hr.glow2:before {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--purple);
+    background: linear-gradient(135deg, var(--purple), var(--vibrant-purple), var(--pink));
     z-index: 400;
-    left: -44px;
-    top: 40%;
+    left: -44.5px;
+    top: 42%;
+}
+
+/* Dates for list items */
+
+#portfolio-1:after {
+    content: "09/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
+}
+#portfolio-2:after {
+    content: "09/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
+}
+#portfolio-3:after {
+    content: "08/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
+}
+#portfolio-4:after {
+    content: "08/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
+}
+#portfolio-5:after {
+    content: "06/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
+}
+#portfolio-6:after {
+    content: "05/25";
+    display: inline-block;
+    rotate: 270deg;
+    position: absolute;
+    left: -87px;
+    top: 41%;
+    opacity: 0.6;
 }
 
 .portfolio-image-wrapper {
