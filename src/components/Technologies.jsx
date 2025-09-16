@@ -1,6 +1,17 @@
 import cards from '../../cards'
+import { motion, useScroll, useTransform } from 'motion/react'
+import { useRef } from 'react'
 
 export default function Technologies() {
+
+    const ref = useRef(null)
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "0 0"]
+    });
+
+    const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     const cardElements = cards.map((card) => {
         return (
@@ -22,17 +33,26 @@ export default function Technologies() {
 
     return (
         <>
-            <div className="technology-title flex justify-center items-center gap-4">
-                <hr className="w-7/24"/>
-                <div className="text-5xl">Technologies</div>
-                <hr className="w-7/24"/>
-            </div>
-            <div className="flex justify-center items-center">
-                <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 py-10 px-auto">
-                    {cardElements}
-                </section>
-            </div>
-
+            <motion.section
+                id="tech-section"
+                style={{opacity}}
+                ref={ref}
+            >
+                <div
+                    className="technology-title flex justify-center items-center gap-4"
+                    >
+                    <hr className="w-7/24"/>
+                    <div className="text-5xl">Technologies</div>
+                    <hr className="w-7/24"/>
+                </div>
+                <div
+                    className="flex justify-center items-center"
+                    >
+                    <section className="cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 py-10 px-auto">
+                        {cardElements}
+                    </section>
+                </div>
+            </motion.section>
         </>
     )
 }

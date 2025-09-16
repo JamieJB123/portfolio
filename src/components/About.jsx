@@ -83,7 +83,7 @@ export default function About() {
         show: {
             opacity: 1,
             x: 0,
-            transition: { type: "spring", stiffness: 100, damping: 12 }
+            transition: { type: "spring", stiffness: 50, damping: 16, mass: 2 }
         }
     }
 

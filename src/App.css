@@ -242,6 +242,7 @@ hr.glow2:before {
     background: linear-gradient(90deg, var(--vibrant-purple), var(--pink));
     color: transparent;
     background-clip: text;
+    width: fit-content;
 }
 
 .image-section {
@@ -268,10 +269,6 @@ hr.glow2:before {
     margin-bottom: 3rem;
 }
 
-.about-container {
-
-}
-
 .about-segments {
     background-color: #EC4899;
     border-radius: 50px;
@@ -279,6 +276,9 @@ hr.glow2:before {
 
 /* Technologies Section */
 
+#tech-section {
+    height: 100dvh;
+}
 .technology-title {
     margin: 5rem 0rem;
 }
