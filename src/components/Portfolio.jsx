@@ -42,7 +42,12 @@ export default function Portfolio() {
                         </div>
                         <div className="portfolio-info-wrapper">
                             <h3 className="portfolio-inner-title">{portfolio.title}</h3>
-                            {portfolio.liveLink && <a className="portfolio-link" href={portfolio.liveLink} target="_blank" rel="no_opener">Live Link</a>}
+                            {portfolio.liveLink &&
+                            <>
+                                <a className="portfolio-link" href={portfolio.liveLink} target="_blank" rel="noopener">Live Link</a>
+                                <span>| </span>
+                            </>}
+                            <a href={portfolio.github} target="_blank" rel="noopener"  className="github-link">GitHub Repo</a>
                             <p className="portfolio-content">{portfolio.content}</p>
                             <div className="tech-container flex flex-wrap">
                                 <div className="language-element-container">
