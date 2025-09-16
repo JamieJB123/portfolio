@@ -458,12 +458,12 @@ hr.glow2:before {
     text-decoration: underline;
     color: var(--light-purple);
 }
-.github-link {
+.githubrepo-link {
     color: var(--pink);
     font-size: 1.2rem;
     font-weight: 550;
 }
-.github-link:hover {
+.githubrepo-link:hover {
     color: var(--orange);
     text-decoration: underline;
 }
