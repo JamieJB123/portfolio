@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        image: '/src/assets/portfolio/assembly-endgame.jpg',
+        image: '/src/assets/portfolio/assembly.jpg',
         alt: 'Portfolio image of assembly endgame react project',
         title: "Assembly Endgame",
         content: "Practice project to strengthen my understanding of core React concepts.",
@@ -22,7 +22,7 @@ export default [
     },
     {
         id: 3,
-        image: "/src/assets/portfolio/companion-app.jpg",
+        image: "/src/assets/portfolio/companion.jpg",
         alt: "Portfolio image of Django Companion App",
         title: "Companion App",
         content: "Companion app idea sketch built for vulnerable users using Django framework.",
@@ -33,7 +33,7 @@ export default [
     },
     {
         id: 4,
-        image: "/src/assets/portfolio/chaos-cards.jpg",
+        image: "/src/assets/portfolio/chaos.jpg",
         alt: "Portfolio image of Django Chaos Cards App",
         title: "Chaos Cards",
         content: "Chaos Cards is a game I built as a project during my Code Institute Bootcamp using Django framework.",
@@ -44,7 +44,7 @@ export default [
     },
     {
         id: 5,
-        image: "/src/assets/portfolio/dirty-water.jpg",
+        image: "/src/assets/portfolio/dirty.jpg",
         alt: "Portfolio image of Dirty Water Project",
         title: "Dirty Water",
         content: "Dirty water was an environmental app displaying live sewage discharge and tidal data on an interactive map. No live link because API keys were exposed as this was a pure front-end project.",
@@ -54,7 +54,7 @@ export default [
     },
     {
         id: 6,
-        image: "/src/assets/portfolio/healthy-mind.jpg",
+        image: "/src/assets/portfolio/healthy.jpg",
         alt: "Portfolio image of Healthy Mind Project",
         title: "Healthy Mind",
         content: "First project independently built as part of my Code Institute bootcamp. This was the first website I independently built.",
