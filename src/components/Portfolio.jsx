@@ -24,10 +24,16 @@ export default function Portfolio() {
 
 
         const languageElements = portfolio.languages.map((language) => {
-            return <span className="languages">{language}</span>
+            return <span
+                className="languages"
+                key={language}
+                >{language}</span>
         })
         const frameworkElements = portfolio.frameworks.map((framework) => {
-            return <span className="frameworks">{framework}</span>
+            return <span
+                className="frameworks"
+                key={framework}
+                >{framework}</span>
         })
         return <motion.li
             key={portfolio.id}

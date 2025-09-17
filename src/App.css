@@ -147,7 +147,7 @@ nav {
 
 .header-section {
     color: var(--light);
-    height: 95dvh;
+    min-height: 95dvh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -282,7 +282,7 @@ hr.glow2:before {
 /* Technologies Section */
 
 #tech-section {
-    height: 100dvh;
+    min-height: 100dvh;
 }
 .technology-title {
     margin: 5rem 0rem;

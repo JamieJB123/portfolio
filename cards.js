@@ -36,14 +36,14 @@ export default [
     },
     {
         id: 6,
-        image: '/src/assets/css.png',
+        image: '/src/assets/css3.png',
         alt: 'CSS3 logo',
         title: 'CSS3',
         content: 'Learning since 2025'
     },
     {
         id: 7,
-        image: '/src/assets/html.png',
+        image: '/src/assets/html5.png',
         alt: 'HTML5 logo',
         title: 'HTML5',
         content: 'Learning since 2025'
@@ -53,6 +53,34 @@ export default [
         image: '/src/assets/tailwind.png',
         alt: 'Tailwind CSS logo',
         title: 'Tailwind CSS',
+        content: 'Learning since 2025'
+    },
+    {
+        id: 9,
+        image: '/src/assets/bootstrap.png',
+        alt: 'Bootstrap logo',
+        title: 'Bootstrap',
+        content: 'Learning since 2025'
+    },
+    {
+        id: 10,
+        image: '/src/assets/heroku.png',
+        alt: 'Heroku logo',
+        title: 'Heroku',
+        content: 'Learning since 2025'
+    },
+    {
+        id: 11,
+        image: '/src/assets/git.png',
+        alt: 'Git logo',
+        title: 'Git',
+        content: 'Learning since 2025'
+    },
+    {
+        id: 12,
+        image: '/src/assets/github.png',
+        alt: 'GitHub logo',
+        title: 'GitHub',
         content: 'Learning since 2025'
     }
 ]
