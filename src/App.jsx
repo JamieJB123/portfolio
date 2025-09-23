@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Nav from './components/Nav'
 import MouseMove from './components/MouseMove'
 import Home from './components/Home'
 import Technologies from './components/Technologies'
@@ -11,7 +12,8 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      < Nav />
       <MouseMove />
       <Home />
       <About />
