@@ -51,10 +51,21 @@ export default function Portfolio() {
                             <h3 className="portfolio-inner-title">{portfolio.title}</h3>
                             {portfolio.liveLink &&
                             <>
-                                <a className="portfolio-link" href={portfolio.liveLink} target="_blank" rel="noopener">Live Link</a>
+                                <a
+                                    className="portfolio-link"
+                                    href={portfolio.liveLink}
+                                    target="_blank"
+                                    rel="noopener"
+                                    aria-label={`View ${portfolio.title} live site (opens in a new tab).`}>Live Link</a>
                                 <span>| </span>
                             </>}
-                            <a href={portfolio.github} target="_blank" rel="noopener"  className="githubrepo-link">GitHub Repo</a>
+                            <a
+                            href={portfolio.github}
+                            target="_blank"
+                            rel="noopener"
+                            className="githubrepo-link"
+                            aria-label={`View ${portfolio.title} sourcecode on GitHub (opens in a new tab).`}
+                            >GitHub Repo</a>
                             <p className="portfolio-content">{portfolio.content}</p>
                             <div className="tech-container flex flex-wrap">
                                 <div className="language-element-container">

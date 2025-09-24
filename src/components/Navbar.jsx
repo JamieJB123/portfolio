@@ -6,7 +6,7 @@ export default function NavBar() {
 
     return (
         <>
-        <nav>
+        <nav aria-label="Main navigation">
             <div>
                 <h1>MyPortfolio</h1>
             </div>

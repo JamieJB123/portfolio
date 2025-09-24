@@ -15,9 +15,9 @@ export default function MouseMove() {
     }, [])
     return (
         <>
-            <div className="gold-glow"
+            <div className="gold-glow" aria-hidden="true"
             style={{ left: mouse.x, top: mouse.y }}></div>
-            <div className="pulse"
+            <div className="pulse" aria-hidden="true" 
             style={{ left: mouse.x, top: mouse.y }}></div>
         </>
     )

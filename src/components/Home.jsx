@@ -20,11 +20,11 @@ export default function Home() {
                         scaleX: scrollYProgress,
                         background: background,
                     }}
-
+                    aria-hidden="true"
                 />
                 <Typing />
                 <hr></hr>
-                <div className="glow"></div>
+                <div aria-hidden="true" className="glow"></div>
             </header>
         </>
     )

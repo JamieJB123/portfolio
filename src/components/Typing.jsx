@@ -50,7 +50,7 @@ export default function Typing() {
     return (
         <>
             <div>
-                <h1 className="purple-titles ps-12">{displayed}<span className={cursor ? "typewriter-effect" : "hidden"}>|</span></h1>
+                <h1 aria-live="polite" className="purple-titles ps-12">{displayed}<span className={cursor ? "typewriter-effect" : "hidden"}>|</span></h1>
                 <h2 className={`header-message ${messageDisplay ? "visible" : ""}`}>Building custom web solutions across the stack.</h2>
             </div>
         </>
