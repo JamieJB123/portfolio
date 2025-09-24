@@ -42,7 +42,7 @@ export default function Technologies() {
                     className="technology-title flex justify-center items-center gap-4"
                     >
                     <hr className="w-7/24"/>
-                    <div className="text-5xl">Technologies</div>
+                    <div className="text-3xl md:text-5xl">Technologies</div>
                     <hr className="w-7/24"/>
                 </div>
                 <div

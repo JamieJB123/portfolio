@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const text = ["Software Developer", "Front-end, back-end, full-stack", "DevJamie"]
+const text = ["Software Developer", "Front-end, back-end, full-stack", "JamieJB"]
 
 export default function Typing() {
 
