@@ -3,7 +3,7 @@ import { a } from "motion/react-client"
 export default function CV() {
     return (
         <a
-        href="/CV.pdf"
+        href="CV.pdf"
         download
         className="download-cv"
         aria-label="Download my CV as a PDF"

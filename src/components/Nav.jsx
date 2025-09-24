@@ -7,7 +7,7 @@ export default function NavBar() {
         <nav aria-label="Main navigation" className="navbar-fixed">
             <div className="navbar-content">
                 <a href="#home">
-                    <img id="nav-logo" src="src/assets/nav-logo.png" alt="nav-logo"></img>
+                    <img id="nav-logo" src="assets/nav-logo.png" alt="nav-logo"></img>
                 </a>
                 <button
                     className="burger-menu"
