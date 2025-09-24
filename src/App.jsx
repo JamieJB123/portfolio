@@ -1,5 +1,4 @@
 import './App.css'
-import Navbar from './components/Navbar'
 import Nav from './components/Nav'
 import CV from './components/CV'
 import MouseMove from './components/MouseMove'
@@ -13,7 +12,6 @@ export default function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
       < Nav />
       <MouseMove />
       <CV />
