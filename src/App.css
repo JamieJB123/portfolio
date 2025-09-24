@@ -171,8 +171,7 @@ button {
     top: 90px;
     right: 2.8rem;
     z-index: 1000;
-    box-shadow: 0px 0px 5px 5px #2563EB;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in-out;
 }
 
 .download-cv:hover {
@@ -619,4 +618,32 @@ hr.glow2:before {
 .glow-box>svg {
     width: 75%;
     height: 75%
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 525px) {
+    .list-container {
+        padding: 0px 0rem 0px 1rem;
+    }
+    .portfolio-info-wrapper {
+        max-width: 320px;
+    }
+}
+
+/* Change layout of portfolio list items on smaller screens to flex-col */
+@media screen and (max-width: 830px) {
+    .portfolio-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Change layout of portfolio section to 2 column grid on larger screen sizes */
+@media screen and (min-width: 1140px) {
+    #portfolio {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+    }
 }

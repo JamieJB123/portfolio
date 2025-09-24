@@ -43,7 +43,7 @@ export default function Portfolio() {
             viewport={{once: true, amount: 0.2 }}
             id={`portfolio-${portfolio.id}`}
             >
-                    <div className="flex items-center gap-6">
+                    <div className="portfolio-items flex items-center gap-6">
                         <div className="portfolio-image-wrapper shrink-0">
                             <img src={portfolio.image} alt={portfolio.alt} />
                         </div>
@@ -71,7 +71,7 @@ export default function Portfolio() {
 
     return (
         <>
-        <section id="portfolio" className="portfolio-section flex flex-col items-center md:grid grid-cols-[3fr_7fr] gap-4">
+        <section id="portfolio" className="portfolio-section flex flex-col items-center gap-4">
             <div className="portfolio-title flex justify-center items-center gap-4 ps-4">
                 <hr className="w-1/3"/>
                 <h2 className="purple-titles text-5xl">Portfolio</h2>
