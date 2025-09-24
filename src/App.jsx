@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <CV />
-      < Nav />
+      <Nav />
       <MouseMove />
       <Home />
       <About />
