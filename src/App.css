@@ -51,7 +51,7 @@ body {
 }
 
 button {
-    cursor: url('assets/custom-cursor.png'), auto;
+    cursor: url('/assets/custom-cursor.png'), auto;
 }
 
 /* Navbar */
@@ -320,7 +320,7 @@ hr.glow2:before {
 .profile-image-container {
     border-radius: 50%;
     border: 2px solid var(--old-gold);
-    background-image: url("assets/profile-image.jpeg");
+    background-image: url("/assets/profile-image.jpeg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
