@@ -74,6 +74,7 @@ button {
     align-items: center;
     padding: 1rem 3rem;
     color: var(--dark-gold);
+    position: relative;
 }
 
 #nav-logo {
@@ -94,7 +95,7 @@ button {
 
 .nav-links {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 100%;
     right: 0.5rem;
     background: var(--brown-dark);
