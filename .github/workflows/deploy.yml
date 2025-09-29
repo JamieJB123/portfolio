@@ -1,19 +1,17 @@
 # The name of this workflow (shows up in GitHub’s "Actions" tab)
 name: Deploy to GitHub Pages
 
-# 👇 When should this workflow run?
 on:
   push:
     branches:
-      - main  # <-- change this if your default branch is called 'master'
+      - main
 
-# 👇 Jobs = sets of steps that GitHub will run
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest  # The server environment (Linux machine)
 
     steps:
-      # Step 1: Check out your repo’s code
+      # Step 1: Check out repo’s code
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -21,13 +19,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22  # You can use the same version as your local dev
+          node-version: 22
 
       # Step 3: Install dependencies (like npm install)
       - name: Install dependencies
         run: npm ci  # npm ci is faster + reproducible compared to npm install
 
-      # Step 4: Build your Vite app
+      # Step 4: Build Vite app
       - name: Build project
         run: npm run build
 
@@ -36,4 +34,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Auto-created by GitHub
-          publish_dir: ./dist  # 👈 This is where Vite outputs your built site
+          publish_dir: ./dist  # 👈 Where Vite outputs built site
