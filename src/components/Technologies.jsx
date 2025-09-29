@@ -1,6 +1,6 @@
 import cards from '../../cards'
 import { motion, useScroll, useTransform } from 'motion/react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 export default function Technologies() {
 
@@ -13,13 +13,38 @@ export default function Technologies() {
 
     const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
+    const [ flippedCards, setFlippedCards ] = useState({})
+
+    const toggleFlipped = (id) => {
+        setFlippedCards((prev) => (
+            {
+                ...prev,
+                [id]: !prev[id]
+            }
+        ))
+    }
+
     const cardElements = cards.map((card) => {
+        const isFlipped = flippedCards[card.id] || false
         return (
             <div
                 className="card-container w-64 h-80 perspective"
                 key={card.id}
                 aria-label={`Technology card: ${card.title}.`}>
-                <div className="card relative w-full h-full transition-transform duration-700 transform-style hover:rotate-y-180">
+                <div
+                    className={`card relative w-full h-full transition-transform duration-700 transform-style hover:rotate-y-180 ${isFlipped ? "rotate-y-180" : ""}`}
+                    onClick={() => toggleFlipped(card.id)}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            toggleFlipped(card.id);
+                        }
+                    }}
+                    tabIndex={0}
+                    role="button"
+                    aria-pressed={isFlipped}
+                    aria-label={`Technology Card: ${card.title}. ${isFlipped ? "Back-side shown." : "Front-side shown."}`}
+                    >
                     {/* Front */}
                     <div className="front-side absolute w-full h-full flex items-center justify-center backface-hidden">
                         <img className="card-image" src={card.image} alt={card.alt}></img>
