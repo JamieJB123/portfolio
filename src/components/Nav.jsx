@@ -10,13 +10,15 @@ export default function NavBar() {
                     <img id="nav-logo" src="assets/nav-logo.png" alt="nav-logo"></img>
                 </a>
                 <button
-                    className="burger-menu"
+                    className="burger-menu2"
                     aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
                     aria-controls="main-menu"
                     aria-expanded={isOpen}
                     onClick={() => setIsOpen((prev) => !prev)}
                 >
-                    &#9776;
+                        <span className="burger-bar"></span>
+                        <span className="burger-bar"></span>
+                        <span className="burger-bar"></span>
                 </button>
                 <ul
                     id="main-menu"
